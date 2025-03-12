@@ -1,4 +1,4 @@
-# Titan Core - Modern Astro Theme
+<!-- # Titan Core - Modern Astro Theme
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 **Titan Core** is a high-performance, feature-rich theme for Astro JS, designed for modern websites, blogs, and portfolios. With beautiful UI components, multiple theme options, and a focus on performance, Titan Core helps you build stunning websites quickly.
@@ -111,8 +111,9 @@ By default, Titan Core includes a theme switcher component that allows users to 
      <slot />
      <Footer footerCta={footerCta} />
      <!-- Remove this line -->W
+
      <ThemeSwitcher />
-     
+
      <script>
        import AOS from 'aos';
        AOS.init({
@@ -120,6 +121,7 @@ By default, Titan Core includes a theme switcher component that allows users to 
          once: true,
        });
      </script>
+
    </body>
    ```
 
@@ -140,13 +142,13 @@ Titan Core includes a wide range of components:
 
 ## 🛠️ Commands
 
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `npm install`          | Install dependencies                            |
-| `npm run dev`          | Start local dev server at `localhost:4321`      |
-| `npm run build`        | Build your production site to `./dist/`          |
-| `npm run preview`      | Preview your build locally, before deploying     |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
+| Command             | Action                                           |
+| :------------------ | :----------------------------------------------- |
+| `npm install`       | Install dependencies                             |
+| `npm run dev`       | Start local dev server at `localhost:4321`       |
+| `npm run build`     | Build your production site to `./dist/`          |
+| `npm run preview`   | Preview your build locally, before deploying     |
+| `npm run astro ...` | Run CLI commands like `astro add`, `astro check` |
 
 ## 📄 License
 
@@ -156,4 +158,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 - Built with [Astro](https://astro.build)
 - Animations by [AOS](https://michalsnik.github.io/aos/)
-- Icons from [Lucide](https://lucide.dev)
+- Icons from [Lucide](https://lucide.dev) -->
