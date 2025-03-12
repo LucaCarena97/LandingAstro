@@ -1,0 +1,169 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Hero from "@components/sections/Hero.astro";
+import SplitPanel from "@components/sections/SplitPanel.astro";
+import Features from "@components/sections/Features.astro";
+import Stats from "@components/sections/Stats.astro";
+import { featureLists } from "@data/features";
+import { statsLists } from "@data/stats";
+import Logos from "@components/sections/Logos.astro";
+import { logoLists } from "@data/logos";
+import CtaBanner from "@components/sections/CtaBanner.astro";
+import Faqs from "@components/sections/Faqs.astro";
+import { faqLists } from "@data/faqs";
+import RecentPosts from "@components/sections/RecentPosts.astro";
+import heroImage from "../assets/images/home/default-hero-2.jpg";
+import styleGuideImage from "../assets/images/home/developer.jpg";
+
+const seoTitle = "Modern, High-Performance Astro Theme";
+const seoDescription =
+  "A modern, high-performance Astro theme for developer portfolios and documentation sites.";
+
+const heroContent = {
+  title: "La solución integral para tus necesidades de impresión",
+  description:
+    "Reciclado Rosario es una opción eficiente para ofrecer cartuchos e impresoras de alta calidad a precios accesibles. Con un enfoque en sostenibilidad y rendimiento, es la base perfecta para tus proyectos de impresión y adaptar a tus necesidades específicas.",
+  //   buttons: [
+  //     {
+  //       text: "Get Started",
+  //       link: "/contact",
+  //       target: "_self",
+  //     },
+  //     {
+  //       text: "View on GitHub",
+  //       link: "https://github.com/rspisarski/titan-core",
+  //       target: "_blank",
+  //     },
+  //   ],
+  backgroundImage: heroImage,
+  overlayOpacity: 0.2,
+};
+
+const featuresSection = {
+  //   eyebrow: "CORE FEATURES",
+  title: "Imprime tu mundo con calidad y confianza",
+  description:
+    "Reciclado Rosario no solo ofrece soluciones sostenibles en impresoras y cartuchos, sino que también impulsa tus ideas, proyectos y sueños con innovación y compromiso. ¡Transformamos tu experiencia de impresión en una herramienta poderosa para el éxito!",
+  features: featureLists.main.features,
+  //   button: {
+  //     text: "View Theme Info",
+  //     link: "/theme-info",
+  //     variant: "primary" as const,
+  //   },
+};
+
+const FooterCta = {
+  eyebrow: "Únete a Nuestra Comunidad",
+  title: " Comienza a Imprimir con Reciclado Rosario Hoy",
+  description:
+    "Reciclado Rosario está comprometido con ofrecer soluciones de impresión de alta calidad. Únete a nuestra comunidad para obtener soporte, compartir tus experiencias o explorar las últimas novedades en tecnología de impresión.",
+  hideCta: false,
+  button: {
+    text: "Explorar Reciclado Rosario",
+    link: "https://tu-enlace-ejemplo.com",
+    target: "_blank",
+  },
+};
+
+const styleGuideSection = {
+  eyebrow: "Sistema de Impresión",
+  headline: "Componentes Confiables y de Alta Calidad",
+  description:
+    "Reciclado Rosario ofrece una guía completa para asegurarte de que tus proyectos de impresión mantengan consistencia y calidad. Desde impresoras hasta cartuchos, cada solución ha sido seleccionada cuidadosamente para brindarte el mejor desempeño.",
+  image: {
+    src: styleGuideImage,
+    alt: "Imagen destacada",
+  },
+  //   buttons: [
+  //     {
+  //       text: "Explorar Opciones",
+  //       link: "/productos",
+  //       variant: "primary" as const,
+  //     },
+  //   ],
+};
+
+const sideBySideStats = {
+  eyebrow: "Estadísticas",
+  title: "Diseñado para Rendimiento y Versatilidad",
+  description:
+    "EcoPrint está diseñado pensando en la calidad y las necesidades de impresión modernas. Nuestros productos ofrecen lo esencial sin complicaciones, permitiéndote imprimir con eficiencia y precisión.",
+  variant: "side-by-side" as const,
+  stats: statsLists.withContent.stats,
+  content: {
+    title: "Diseñado para Rendimiento y Versatilidad",
+    description:
+      "EcoPrint está diseñado pensando en la calidad y las necesidades de impresión modernas. Nuestros productos ofrecen lo esencial sin complicaciones, permitiéndote imprimir con eficiencia y precisión.",
+    // button: {
+    //   text: "Descubre EcoPrint",
+    //   link: "/informacion-productos",
+    //   variant: "primary" as const,
+    // },
+  },
+};
+
+const mainCta = {
+  eyebrow: "Soluciones de Impresión",
+  title: "Componentes Listos para Usar",
+  description:
+    "Ahorra tiempo con nuestras soluciones de impresión predefinidas y accesibles. Cada producto está diseñado para integrarse perfectamente con tus necesidades, garantizando un rendimiento excepcional.",
+  //   button: {
+  //     text: "Ver Todos los Productos",
+  //     link: "/productos",
+  //     variant: "primary" as const,
+  //     target: "_self" as const,
+  //   },
+};
+
+const logosSection = {
+  eyebrow: "Our Clients",
+  logos: logoLists.main.logos,
+};
+
+const faqsSection = {
+  eyebrow: "Preguntas Frecuentes",
+  title: "Resuelve Tus Dudas",
+  description:
+    "Encuentra respuestas a las preguntas más comunes sobre nuestras impresoras y cartuchos, así como sobre nuestros servicios.",
+  faqs: faqLists.main.faqs,
+};
+
+const recentPostsSection = {
+  eyebrow: "ÚLTIMAS NOVEDADES",
+  title: " Aprende de Nuestra Experiencia",
+  description:
+    "Descubre nuestros artículos más recientes sobre impresoras de alta calidad, consejos para elegir los mejores cartuchos y prácticas para optimizar tus soluciones de impresión.",
+  //   button: {
+  //     text: "Ver Todos los Artículos",
+  //     link: "/blog",
+  //     variant: "primary" as const,
+  //   },
+};
+---
+
+<Layout footerCta={FooterCta} title={seoTitle} description={seoDescription}>
+  <Hero content={heroContent} />
+  <Features content={featuresSection} padding="base" background="light" />
+  <RecentPosts
+    content={recentPostsSection}
+    background="base"
+    padding="base"
+    postsToShow={3}
+    category="Theme Usage"
+  />
+  <SplitPanel
+    content={styleGuideSection}
+    imagePosition="right"
+    background="light"
+    padding="base"
+  />
+  <CtaBanner
+    content={mainCta}
+    variant="contained"
+    background="light"
+    paddingBottom="base"
+  />
+  <Logos content={logosSection} background="base" padding="small" />
+  <Stats content={sideBySideStats} background="dark" padding="base" />
+  <Faqs content={faqsSection} background="base" padding="base" />
+</Layout>

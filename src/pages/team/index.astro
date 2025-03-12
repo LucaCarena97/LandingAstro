@@ -1,0 +1,20 @@
+---
+import Layout from "@layouts/Layout.astro";
+import InnerHero from "@components/sections/InnerHero.astro";
+import TeamGrid from "@components/sections/TeamGrid.astro";
+
+const seoTitle = "Nuestras Impresoras";
+const seoDescription =
+  "Descubre nuestra seleccionada gama de impresoras, donde innovación y tecnología se unen para ofrecerte resultados de alta calidad en cada impresión.";
+
+const heroContent = {
+  title: "Nuestras Impresoras",
+  description:
+    "Explora las impresoras líderes en el mercado y encuentra la solución ideal para tus necesidades de impresión.",
+};
+---
+
+<Layout title={seoTitle} description={seoDescription}>
+  <InnerHero content={heroContent} />
+  <TeamGrid padding="base" />
+</Layout>
