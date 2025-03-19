@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
 @import "tailwindcss";
 
-@theme {
+@theme{
+
 
     --color-primary: #3557c1;
     --color-primary-light: #4b6ed4;
@@ -79,11 +82,12 @@
     --border-radius-base: 1rem;
     --border-radius-large: 2rem;
     
-    --font-bruno-ace: 'Bruno Ace SC', sans-serif;
-    --font-noto-sans-kr: "Noto Sans KR", sans-serif;
-    --font-base: 'Noto Sans KR', sans-serif;
-    --font-logo: 'Bruno Ace SC', sans-serif;
-    --font-headline: 'Noto Sans KR', sans-serif;
+    
+    --font-bruno-ace: 'Comic Neue', sans-serif;
+    --font-noto-sans-kr: "Comic Neue", sans-serif;
+    --font-base: 'Comic Neue', sans-serif;
+    --font-logo: 'Comic Neue', cursive, sans-serif;
+    --font-headline: 'Comic Neue', sans-serif;
 }
 
 @layer base {
@@ -417,7 +421,7 @@
     }
 
     [data-theme='demeter'] {
-        --color-primary: #445624;
+        --color-primary: #319731;
         --color-primary-light: #556b2f;
         --color-primary-dark: #33401b;
         --color-secondary: #733a10;
@@ -529,14 +533,9 @@ body {
     var(--c1) 0% 5%, var(--c2) 6% 15%, var(--c1) 16% 25%, var(--c2) 26% 35%, var(--c1) 36% 45%,
     var(--c2) 46% 55%, var(--c1) 56% 65%, var(--c2) 66% 75%, var(--c1) 76% 85%, var(--c2) 86% 95%,
     #0000 96%;
-    background:
-        radial-gradient(50% 50% at 100% 0, var(--_g)),
-        radial-gradient(50% 50% at 0 100%, var(--_g)),
-        radial-gradient(50% 50%, var(--_g)),
-        radial-gradient(50% 50%, var(--_g)) calc(var(--s)/2) calc(var(--s)/2) var(--c1);
+   
     background-size: var(--s) var(--s);
 }
-
 /* Style the pre element containing the code */
 pre {
     padding: 1rem;
@@ -564,3 +563,40 @@ pre[class*="language-"] {
     border-radius: 2px;
     font-weight: 400;
 }
+
+.comic-neue-light {
+    font-family: "Comic Neue", cursive;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .comic-neue-regular {
+    font-family: "Comic Neue", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .comic-neue-bold {
+    font-family: "Comic Neue", cursive;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .comic-neue-light-italic {
+    font-family: "Comic Neue", cursive;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .comic-neue-regular-italic {
+    font-family: "Comic Neue", cursive;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .comic-neue-bold-italic {
+    font-family: "Comic Neue", cursive;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
